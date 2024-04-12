@@ -1,20 +1,37 @@
 import './App.css';
 import { useState } from 'react';
-import DisplayText from './components/DisplayText';
+import Header from './components/Header';
+import AppArea from './components/AppArea';
+import Result from './components/Result';
 
 function App() {
-  const [text, setText] = useState('');
+	const [userInput, setUserInput] = useState('');
+	const [display, setDisplay] = useState('app');
+
+	const checkButtonHandler = () => {
+		setDisplay('reslut');
+	}
+
+	const returnButtonHandler = () => {
+		setDisplay('app');
+	}
+
+	const textInputHandler = () => {
+
+	}
 
 	return (
-		<div className='app'>
-			<div className='Header'>
-				<h1>Fast Typing App</h1>
-			</div>
-      <p>{text}</p>
-			<div className='main-container'>
-				<p className='Text'>Lorem ipsum itd...</p>
-				<DisplayText setText={setText} />
-			</div>
+		<div className='application'>
+			<Header />
+			{
+				display === 'app' ? 
+				<AppArea 
+					checkButtonHandler={checkButtonHandler} 
+					textInputHandler={textInputHandler} 
+				/> 
+				: 
+				<Result returnButtonHandler={returnButtonHandler}  />
+			}
 		</div>
 	);
 }
