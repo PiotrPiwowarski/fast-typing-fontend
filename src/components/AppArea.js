@@ -1,16 +1,29 @@
 import React from 'react';
 import ButtonsBar from './ButtonsBar';
-import DisplayText from './DisplayText';
+import DisplayPattern from './DisplayPattern';
 import TextInput from './TextInput';
 
-const AppArea = ({ checkButtonHandler }) => {
-    return (
-        <div>
-            <ButtonsBar />
-			<DisplayText />
-			<TextInput checkButtonHandler={checkButtonHandler}/>
-        </div>
-    );
-}
+const AppArea = ({
+    setUserInput,
+	pattern,
+    setPattern,
+	statisticsButtonHandler,
+    error,
+    setError,
+    setStart
+}) => {
+	return (
+		<div>
+			<ButtonsBar setPattern={setPattern} setError={setError} />
+            <p className='error'>{error}</p>
+			<DisplayPattern pattern={pattern} />
+			<TextInput
+                setUserInput={setUserInput}
+                statisticsButtonHandler={statisticsButtonHandler}
+                setStart={setStart}
+			/>
+		</div>
+	);
+};
 
 export default AppArea;
