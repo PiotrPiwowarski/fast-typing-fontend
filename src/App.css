@@ -40,7 +40,7 @@ html {
 
 .header {
 	padding: 20px;
-	width: 100%;
+	width: 100vw;
 	background-color: rgba(128, 128, 128, 1);
 }
 

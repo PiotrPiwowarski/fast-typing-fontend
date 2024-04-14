@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Result = ({ statistics, time, setUserInput, setNavigation, setPattern }) => {
+const Result = ({ statistics, setTime, time, setUserInput, setNavigation, setPattern }) => {
 
     const returnButtonHandler = () => {
 		setUserInput('');
@@ -17,14 +17,16 @@ const Result = ({ statistics, time, setUserInput, setNavigation, setPattern }) =
 						<th>niepoprawne słowa</th>
 						<th>trafność</th>
 						<th>czas</th>
+						<th>słów na minute</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td>{statistics.correctWords}</td>
 						<td>{statistics.incorrectWords}</td>
-						<td>{statistics.accuracy}</td>
-						<td>{statistics.correctWords}</td>
+						<td>{statistics.accuracy}%</td>
+						<td>{statistics.time}s</td>
+						<td>{statistics.wordsPerMinute}</td>
 					</tr>
 				</tbody>
 			</table>
