@@ -16,7 +16,7 @@ html {
 .btn {
 	margin: 10px 30px;
 	color: white;
-	background-color: rgba(128, 128, 128, 1);
+	background-color: black;
 	border: none;
 	padding: 10px 20px;
 	border-radius: 10px;
@@ -24,11 +24,11 @@ html {
 }
 
 .btn:hover {
-	background-color: rgba(128, 128, 128, 0.7);
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
 .btn:active {
-	background-color: rgba(128, 128, 128, 0.4);
+	background-color: rgba(0, 0, 0, 0.4);
 }
 
 .application {
@@ -41,7 +41,7 @@ html {
 .header {
 	padding: 20px;
 	width: 100vw;
-	background-color: rgba(128, 128, 128, 1);
+	background-color: black;
 }
 
 .header-text {
@@ -76,10 +76,14 @@ html {
 
 .input {
 	width: 50vw;
-	background-color: grey;
+	background-color: black;
 	color: white;
 	border: none;
 	font-size: 20px;
+}
+
+input:focus {
+	outline: none;
 }
 
 .result {

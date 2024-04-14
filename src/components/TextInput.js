@@ -1,8 +1,9 @@
 import React from 'react';
 
-const TextInput = ({ statisticsButtonHandler, setUserText, setStartTime }) => {
+const TextInput = ({ statisticsButtonHandler, setUserText, setStartTime, patternText, setError }) => {
 	const textInputHandler = (event) => {
 		if (event.target.value.length === 1) {
+			setError('');
 			setStartTime(new Date());
 		}
 		setUserText(event.target.value);
@@ -10,7 +11,7 @@ const TextInput = ({ statisticsButtonHandler, setUserText, setStartTime }) => {
 
 	return (
 		<div className='text-input'>
-			<input className='input' onChange={textInputHandler} />
+			<input className='input' onChange={textInputHandler} placeholder={patternText} />
 			<button className='btn' onClick={statisticsButtonHandler}>
 				sprawdź
 			</button>

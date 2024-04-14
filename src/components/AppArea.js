@@ -18,9 +18,11 @@ const AppArea = ({
 			<p className='error'>{error}</p>
 			<DisplayPattern patternText={patternText} />
 			<TextInput
+				patternText={patternText}
 				setUserText={setUserText}
 				statisticsButtonHandler={statisticsButtonHandler}
 				setStartTime={setStartTime}
+				setError={setError}
 			/>
 		</div>
 	);
