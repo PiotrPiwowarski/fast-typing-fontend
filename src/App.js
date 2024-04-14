@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import AppArea from './components/AppArea';
 import Result from './components/Result';
@@ -11,27 +11,25 @@ export const secondValue = 10;
 export const thirdValue = 30;
 
 const App = () => {
-	const [userInput, setUserInput] = useState('');
-	const [pattern, setPattern] = useState('');
+	const [userText, setUserText] = useState('');
+	const [patternText, setPatternText] = useState('');
 	const [navigation, setNavigation] = useState('playground');
 	const [statistics, setStatistics] = useState(null);
-	const [start, setStart] = useState(0);
+	const [startTime, setStartTime] = useState(0);
 	const [error, setError] = useState('');
 
 	const statisticsButtonHandler = () => {
-		if(pattern === '') {
+		if (patternText === '') {
 			setError('wybierz rodzaj gry');
-		}
-		else if(userInput === '') {
+		} else if (userText === '') {
 			setError('wprowadź tekst');
 		} else {
 			setError('');
 			const dataToVerification = {
-				textToVerification: userInput,
-				pattern: pattern,
-				time: (new Date() - start)
+				userText: userText,
+				patternText: patternText,
+				time: new Date() - startTime,
 			};
-			console.log(dataToVerification);
 			fetch(url, {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
@@ -40,7 +38,7 @@ const App = () => {
 				.then((response) => response.json())
 				.then((response) => setStatistics(response))
 				.then(() => setNavigation('statistics'))
-				.catch((error) => console.error(error))
+				.catch((error) => console.error(error));
 		}
 	};
 
@@ -55,20 +53,20 @@ const App = () => {
 			<Header />
 			{navigation === 'playground' ? (
 				<AppArea
-					setUserInput={setUserInput}
-					pattern={pattern}
-					setPattern={setPattern}
+					setUserText={setUserText}
+					patternText={patternText}
+					setPatternText={setPatternText}
 					statisticsButtonHandler={statisticsButtonHandler}
 					error={error}
 					setError={setError}
-					setStart={setStart}
+					setStartTime={setStartTime}
 				/>
 			) : (
 				<Result
 					statistics={statistics}
-					setUserInput={setUserInput}
+					setUserText={setUserText}
 					setNavigation={setNavigation}
-					setPattern={setPattern}
+					setPatternText={setPatternText}
 				/>
 			)}
 		</div>

@@ -76,35 +76,35 @@ html {
 
 .input {
 	width: 50vw;
-    background-color: grey;
-    color: white;
-    border: none;
+	background-color: grey;
+	color: white;
+	border: none;
 	font-size: 20px;
 }
 
 .result {
 	display: flex;
-    flex-direction: column;
-    justify-content: top;
-    align-items: center;
+	flex-direction: column;
+	justify-content: top;
+	align-items: center;
 }
 
 table {
-    margin: 20px 10px;
+	margin: 20px 10px;
 }
 
 th {
-    padding: 10px;
-    background-color: grey;
-    border-radius: 10px;
-    color: white;
+	padding: 10px;
+	background-color: grey;
+	border-radius: 10px;
+	color: white;
 }
 
 td {
-    text-align: center;
+	text-align: center;
 }
 
 .error {
-    text-align: center;
-    color: red;
+	text-align: center;
+	color: red;
 }

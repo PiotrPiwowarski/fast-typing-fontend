@@ -4,23 +4,23 @@ import DisplayPattern from './DisplayPattern';
 import TextInput from './TextInput';
 
 const AppArea = ({
-    setUserInput,
-	pattern,
-    setPattern,
+	setUserText,
+	patternText,
+	setPatternText,
 	statisticsButtonHandler,
-    error,
-    setError,
-    setStart
+	error,
+	setError,
+	setStartTime,
 }) => {
 	return (
 		<div>
-			<ButtonsBar setPattern={setPattern} setError={setError} />
-            <p className='error'>{error}</p>
-			<DisplayPattern pattern={pattern} />
+			<ButtonsBar setPatternText={setPatternText} setError={setError} />
+			<p className='error'>{error}</p>
+			<DisplayPattern patternText={patternText} />
 			<TextInput
-                setUserInput={setUserInput}
-                statisticsButtonHandler={statisticsButtonHandler}
-                setStart={setStart}
+				setUserText={setUserText}
+				statisticsButtonHandler={statisticsButtonHandler}
+				setStartTime={setStartTime}
 			/>
 		</div>
 	);

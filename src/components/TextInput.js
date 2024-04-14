@@ -1,15 +1,11 @@
 import React from 'react';
 
-const TextInput = ({
-	statisticsButtonHandler,
-    setUserInput,
-    setStart
-}) => {
+const TextInput = ({ statisticsButtonHandler, setUserText, setStartTime }) => {
 	const textInputHandler = (event) => {
-        if(event.target.value.length === 1) {
-            setStart(new Date());
-        }
-		setUserInput(event.target.value);
+		if (event.target.value.length === 1) {
+			setStartTime(new Date());
+		}
+		setUserText(event.target.value);
 	};
 
 	return (

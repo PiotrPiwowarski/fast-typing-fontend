@@ -1,12 +1,11 @@
 import React from 'react';
 
-const Result = ({ statistics, setTime, time, setUserInput, setNavigation, setPattern }) => {
-
-    const returnButtonHandler = () => {
-		setUserInput('');
-        setPattern('');
+const Result = ({ statistics, setUserText, setNavigation, setPatternText }) => {
+	const returnButtonHandler = () => {
+		setUserText('');
+		setPatternText('');
 		setNavigation('playground');
-	}
+	};
 
 	return (
 		<div className='result'>
