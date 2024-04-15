@@ -29,7 +29,7 @@ This Frontend is created using following technologies:
 ### Game
 * User can choose a game out of three possible ones
 * Text appropriate to the selected game type will be displayed
-* User can check statistics after finish typing by clicking the button below or enter
+* User can check statistics after finish typing by clicking the button below or pressing enter
 ### Statistics
 * After the game is over, the following statistics are available: correct words, incorrect words, accuracy, game duration, typing speed (words per minute)
 
