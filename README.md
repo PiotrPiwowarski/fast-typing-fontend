@@ -5,7 +5,9 @@ and as fast as possible. After rewriting the text, user can check statistics.
 ## Introduction
 This project only contains frontend of the application, API is in a separate project on GitHub, link below:
 
-`https://github.com/PiotrPiwowarski/fast-typing-backend`
+```
+https://github.com/PiotrPiwowarski/fast-typing-backend
+```
 
 ## Technologies
 This Frontend is created using following technologies:
@@ -17,13 +19,13 @@ This Frontend is created using following technologies:
 
 ## Screens
 ### Home
-![home](./img/home.jpeg)
+![home](./readme-img/home.jpeg)
 
 ### Game
-![game](./img/game.jpeg)
+![game](./readme-img/game.jpeg)
 
 ### Statistics
-![statistics](./img/statistics.jpeg)
+![statistics](./readme-img/statistics.jpeg)
 
 ## Functionalities
 ### Game
@@ -36,6 +38,15 @@ This Frontend is created using following technologies:
 ## Running the application
 ### Using Docker
 1. Go to the main application folder 
-2. Use following command in terminal `docker compose up`
-3. Open `http://localhost:3000` in your browser
+2. Use following command in terminal:
+
+```
+docker compose up
+```
+
+4. Use following URL in your browser:
+
+```
+http://localhost:3000
+```
 
