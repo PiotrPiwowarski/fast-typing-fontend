@@ -1,5 +1,5 @@
 # Fast Typing App - Frontend
-This app helps user to improve his typing skills. User selects length of teh text and try to rewrite it without making mistakes
+This app helps user to improve his typing skills. User selects length of the text and try to rewrite it without making mistakes
 and as fast as possible. After rewriting the text, user can check statistics.
 
 ## Introduction
