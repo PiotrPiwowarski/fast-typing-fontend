@@ -33,3 +33,9 @@ This Frontend is created using following technologies:
 ### Statistics
 * After the game is over, the following statistics are available: correct words, incorrect words, accuracy, game duration, typing speed (words per minute)
 
+## Running the application
+### Using Docker
+1. Go to the main application folder 
+2. Use following command in terminal `docker compose up`
+3. Open `http://localhost:3000` in your browser
+
