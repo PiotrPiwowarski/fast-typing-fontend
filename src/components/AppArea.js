@@ -14,7 +14,7 @@ const AppArea = ({
 }) => {
 	return (
 		<div>
-			<ButtonsBar setPatternText={setPatternText} setError={setError} />
+			<ButtonsBar setUserText={setUserText} setPatternText={setPatternText} setError={setError} />
 			<p className='error'>{error}</p>
 			<DisplayPattern patternText={patternText} />
 			<TextInput

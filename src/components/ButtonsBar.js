@@ -1,7 +1,7 @@
 import React from 'react';
 import { url, firstValue, secondValue, thirdValue } from '../App';
 
-const ButtonsBar = ({ setPatternText, setError }) => {
+const ButtonsBar = ({ setPatternText, setError, setUserText }) => {
 	const sendRequest = async (value) => {
 		await fetch(`${url}?length=${value}`, { method: 'GET' })
 			.then((response) => response.json())
@@ -10,18 +10,21 @@ const ButtonsBar = ({ setPatternText, setError }) => {
 	};
 
 	const firstButtonHandler = () => {
+		setUserText('');
 		setError('');
 		const value = firstValue;
 		sendRequest(value);
 	};
 
 	const secondButtonHandler = () => {
+		setUserText('');
 		setError('');
 		const value = secondValue;
 		sendRequest(value);
 	};
 
 	const thirdButtonHandler = () => {
+		setUserText('');
 		setError('');
 		const value = thirdValue;
 		sendRequest(value);
