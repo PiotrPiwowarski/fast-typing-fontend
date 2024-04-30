@@ -3,7 +3,7 @@ import { url, firstValue, secondValue, thirdValue } from '../App';
 
 const ButtonsBar = ({ setPatternText, setError, setUserText }) => {
 	const sendRequest = async (value) => {
-		await fetch(`${url}?length=${value}`, { method: 'GET' })
+		await fetch(`${url}?numberOfWords=${value}`, { method: 'GET' })
 			.then((response) => response.json())
 			.then((data) => setPatternText(data.patternText))
 			.catch((error) => console.error(error));

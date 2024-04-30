@@ -6,9 +6,9 @@ import Result from './components/Result';
 
 export const url = 'http://localhost:8080/api/text';
 
-export const firstValue = 5;
-export const secondValue = 10;
-export const thirdValue = 30;
+export const firstValue = "5";
+export const secondValue = "10";
+export const thirdValue = "30";
 
 const App = () => {
 	const [userText, setUserText] = useState('');

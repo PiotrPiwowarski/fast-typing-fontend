@@ -12,20 +12,18 @@ const Result = ({ statistics, setUserText, setNavigation, setPatternText }) => {
 			<table>
 				<thead>
 					<tr>
-						<th>poprawne słowa</th>
-						<th>niepoprawne słowa</th>
-						<th>trafność</th>
 						<th>czas</th>
 						<th>słów na minute</th>
+						<th>znaków na minute</th>
+						<th>trafność</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td>{statistics.correctWords}</td>
-						<td>{statistics.incorrectWords}</td>
-						<td>{statistics.accuracy}%</td>
-						<td>{statistics.time}s</td>
-						<td>{statistics.wordsPerMinute}</td>
+						<td>{statistics.time.toFixed(2)}s</td>
+						<td>{statistics.wordsPerMinute.toFixed(2)}</td>
+						<td>{statistics.lettersPerMinute.toFixed(2)}</td>
+						<td>{statistics.accuracy.toFixed(2)}%</td>
 					</tr>
 				</tbody>
 			</table>
