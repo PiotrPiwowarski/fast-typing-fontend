@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import AppArea from './components/AppArea';
 import Result from './components/Result';
@@ -12,11 +12,19 @@ export const thirdValue = "30";
 
 const App = () => {
 	const [userText, setUserText] = useState('');
-	const [patternText, setPatternText] = useState('');
+	const [patternText, setPatternText] = useState();
 	const [navigation, setNavigation] = useState('playground');
 	const [statistics, setStatistics] = useState(null);
 	const [startTime, setStartTime] = useState(0);
 	const [error, setError] = useState('');
+
+
+	useEffect(() => {
+		fetch(url, { method: 'GET' })
+				.then((response) => response.json())
+				.then((data) => setPatternText(data.patternText))
+				.catch((error) => console.error(error));
+	}, [navigation])
 
 	const statisticsButtonHandler = () => {
 		if (patternText === '') {

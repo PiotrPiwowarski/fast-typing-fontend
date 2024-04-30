@@ -14,7 +14,7 @@ const Result = ({ statistics, setUserText, setNavigation, setPatternText }) => {
 					<tr>
 						<th>czas</th>
 						<th>słów na minute</th>
-						<th>znaków na minute</th>
+						<th>naciśnięć klawiszy na minute</th>
 						<th>trafność</th>
 					</tr>
 				</thead>
@@ -22,7 +22,7 @@ const Result = ({ statistics, setUserText, setNavigation, setPatternText }) => {
 					<tr>
 						<td>{statistics.time.toFixed(2)}s</td>
 						<td>{statistics.wordsPerMinute.toFixed(2)}</td>
-						<td>{statistics.lettersPerMinute.toFixed(2)}</td>
+						<td>{statistics.keystrokesPerMinute.toFixed(2)}</td>
 						<td>{statistics.accuracy.toFixed(2)}%</td>
 					</tr>
 				</tbody>
